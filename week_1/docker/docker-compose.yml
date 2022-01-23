@@ -1,0 +1,11 @@
+services:
+  pgdb:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=ny_taxi
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+    volumes:
+      - "./pg_data:/var/lib/postgresql/data:rw"
+    ports:
+      - "5432:5432"
